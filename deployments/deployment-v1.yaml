@@ -1,0 +1,25 @@
+# deployments/deployment-v1.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: canary-demo
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: canary-demo
+        version: v1
+    spec:
+      containers:
+      - name: nginx
+        image: dariocastillo11/canary-demo:v1.8
+        env:
+        - name: VERSION
+          value: "HOLA. esta es la version v1"
+        ports:
+        - containerPort: 80

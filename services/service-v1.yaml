@@ -1,0 +1,13 @@
+# services/service-v1.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-v1
+spec:
+  selector:
+    app: canary-demo
+    version: v1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Canary Demo V1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestion de calidad de sofware</h1>
+    <h2>grupo: Soporte técnico</h2>
+  </header>
+  <div class="version-info">
+    <p>Versión activa: <span id="version">Versión desconocida</span></p>
+  </div>
+  <nav>
+    <a href="#" onclick="toggleSubmenu('inicio')">Inicio</a>
+    <a href="#" onclick="toggleSubmenu('caracteristicas')">Características</a>
+    <a href="#" onclick="toggleSubmenu('integrantes')">Integrantes</a>
+  </nav>
+  <div id="submenu-inicio" class="submenu" style="display:none;">
+    <p>Bienvenido al inicio del TP.</p>
+  </div>
+  <div id="submenu-caracteristicas" class="submenu" style="display:none;">
+    <p>Características: Canary Release, Kubernetes, Minikube.</p>
+  </div>
+  <div id="submenu-integrantes" class="submenu" style="display:none;">
+    <p>Integrantes: Dario, Antonio, Sofia,Laureano ...</p>
+  </div>
+  <div class="container">
+    <div class="version">Versión activa: <strong id="version"></strong></div>
+    <p>Bienvenido a la demo de Canary Release. Aquí podemos ver cómo se distribuye el tráfico entre versiones de la aplicación.</p>
+    <ul>
+      <li>Versión principal: v1</li>
+      <li>Versión canaria: v2 (tráfico reducido)</li>
+    </ul>
+  </div>
+  <footer>
+    &copy; 2025 Canary Demo - Gestión de Calidad
+  </footer>
+  <script>
+    function toggleSubmenu(id) {
+      document.querySelectorAll('.submenu').forEach(div => div.style.display = 'none');
+      document.getElementById('submenu-' + id).style.display = 'block';
+    }
+    document.getElementById('version').textContent = window.VERSION || 'Versión desconocida';
+  </script>
+</body>
+</html>
