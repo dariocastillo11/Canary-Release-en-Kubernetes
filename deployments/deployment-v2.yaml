@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: dariocastillo11/canary-demo:v2.8
+        image: dariocastillo11/canary-demo:v2.8 #modificar hago cambios
         env:
         - name: VERSION
-          value: "HOLA. esta es la version v2"  # Cambia este valor
+          value: "HOLA. esta es la version v2"  
         ports:
         - containerPort: 80

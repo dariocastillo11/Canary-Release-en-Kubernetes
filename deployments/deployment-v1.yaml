@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: dariocastillo11/canary-demo:v1.8
+        image: dariocastillo11/canary-demo:v1.8 #modificar hago cambios
         env:
         - name: VERSION
           value: "HOLA. esta es la version v1"

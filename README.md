@@ -97,5 +97,11 @@ kubectl get pods -o wide
 kubectl get svc
 ```
 
+
+```bash
+http://canary.local
+```
+
+
 ---
 
