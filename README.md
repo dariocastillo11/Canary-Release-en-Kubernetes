@@ -1,5 +1,3 @@
----
-
 # 🚀 Despliegue de Minikube y Actualización de Imágenes Canary
 
 ## 🧩 1. Actualizar los repositorios
