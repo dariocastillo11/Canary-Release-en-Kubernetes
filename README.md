@@ -1,6 +1,3 @@
-
----
-
 # 🚀 Despliegue de Minikube y Actualización de Imágenes Canary
 
 ## 🧩 1. Actualizar los repositorios
@@ -101,7 +98,41 @@ kubectl get svc
 ```bash
 http://canary.local
 ```
-
-
+# prueba:
+![](img/v1.png)
+---
+![](img/v2.png)
 ---
 
+
+# k6
+## instalo en mi sistema:
+```bash
+sudo apt update
+sudo apt install k6
+```
+--- 
+## levanto servidor de influx para levantar emtricas
+```bash
+docker run -d --name=influxdb -p 8086:8086 influxdb:1.8
+```
+--- 
+## levanto servidor de grafana
+```bash
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
+
+```
+---
+## saco la ip de influx que me servira para conectar grafana con influx
+```bash
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' influxdb
+
+```
+---
+## corro scrip de js para analizar k6
+```bash
+k6 run --out influxdb=http://172.17.0.2:8086 canary-test.js
+
+```
+## resultados :
+![](img/resutados.png)
