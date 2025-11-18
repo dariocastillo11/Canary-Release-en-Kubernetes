@@ -1,5 +1,6 @@
 # 🚀 Despliegue de Minikube y Actualización de Imágenes Canary
 
+## Presentacion canvas: https://www.canva.com/design/DAG2oMJh31E/Yzfw_2S3DU2Gu5GgKu2Avg/edit?utm_content=DAG2oMJh31E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ## 🧩 1. Actualizar los repositorios
 
 ```bash
